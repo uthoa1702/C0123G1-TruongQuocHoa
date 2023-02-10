@@ -1,10 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>10</title>
 </head>
 <body>
-$END$
+<h1>  kiem tra tien lai suat </h1>
+<table>
+    <tr>
+        <td>
+            <label for="a">
+                nhap so tien vay
+            </label>
+        </td>
+        <td>
+            <input type="number" id="a" name="a" placeholder="vnd"  >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="b">
+                nhap so thang vay
+            </label>
+        </td>
+        <td>
+            <input type="number" id="b" name="b" PLACEHOLDER="thang"  >
+        </td>
+
+    <tr>
+        <td>
+            <button onclick= "kiemtra()" >kiem tra</button>
+        </td>
+        <td id="result"></td>
+    </tr>
+
+</table>
+
 </body>
 </html>
+<script>
+    function kiemtra() {
+
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let result1 = a * 0.05 * b;
+        let result2 = result1 + a * 0.1 * (b - 6);
+        let result3 = result2 + a * 0.15 * (b -12);
+        let result4 = result3 + a * 0.2 * (b - 18);
+
+        if ( b > 0 && b <= 6  )
+            document.getElementById("result").innerHTML = result1;
+        else if ( 7 <= b && b <= 12 )
+            document.getElementById("result").innerHTML = result2;
+        else if (13 <= b && b <= 18)
+            document.getElementById("result").innerHTML = result3;
+        else
+            document.getElementById("result").innerHTML = result4;
+
+    }
+</script>
