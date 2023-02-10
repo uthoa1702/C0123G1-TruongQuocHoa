@@ -25,12 +25,22 @@
             </label>
         </td>
         <td>
-            <input type="number" id="b" name="b" PLACEHOLDER="thang"  >
+            <input type="number" id="b" name="b" placeholder="thang"  >
         </td>
-
+</tr>
     <tr>
         <td>
-            <button onclick= "kiemtra()" >kiem tra</button>
+            <label for="c">
+                nhap so lai suat
+            </label>
+        </td>
+        <td>
+            <input type="number" id="c" name="c" placeholder="%"  >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick= "test()" >kiem tra</button>
         </td>
         <td id="result"></td>
     </tr>
@@ -40,23 +50,19 @@
 </body>
 </html>
 <script>
-    function kiemtra() {
+    function test() {
 
         let a = document.getElementById("a").value;
         let b = document.getElementById("b").value;
-        let result1 = a * 0.05 * b;
-        let result2 = result1 + a * 0.1 * (b - 6);
-        let result3 = result2 + a * 0.15 * (b -12);
-        let result4 = result3 + a * 0.2 * (b - 18);
+        let c = document.getElementById("c").value;
+        let result1 = a * c * b / 100;
 
-        if ( b > 0 && b <= 6  )
+
+        if ( b > 0 && a > 0 && c > 0  )
             document.getElementById("result").innerHTML = result1;
-        else if ( 7 <= b && b <= 12 )
-            document.getElementById("result").innerHTML = result2;
-        else if (13 <= b && b <= 18)
-            document.getElementById("result").innerHTML = result3;
+
         else
-            document.getElementById("result").innerHTML = result4;
+            document.getElementById("result").innerHTML = "vui long kiem tra lai";
 
     }
 </script>
