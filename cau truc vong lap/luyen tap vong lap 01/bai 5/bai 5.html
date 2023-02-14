@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai 5</title>
+    <title>bai 6</title>
 </head>
 <body>
 <script>
-    let n1 = 0;
-    let n2 = 1;
+    let n = 0;
+    let i;
     let sum = 0;
-    let nextNum;
 
-for (i = 0; i <20; i++) {
-    sum = sum  + n1;
-    // document.write(n1 + "<br>");
-    nextNum = n1 + n2 ;
-    n1 = n2;
-    n2 = nextNum
 
+for (i = 1; n <= 30; i++) {
+        if (i % 7 === 0) {
+            n= n+1;
+            sum = sum + i;
+
+
+        }
 }
-document.write(sum);
+    document.write(sum);
 </script>
 </body>
 </html>
