@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>tu dien</title>
 </head>
 <body>
-$END$
+<h1>Từ điển</h1>
+<input type="text" id="viet" name="viet" placeholder="nhap tieng Viet">
+<button onclick="trans()">dich ra tieng Anh</button>
+<br>
+<p id="eng"></p>
 </body>
 </html>
+<script>
+    function trans() {
+        let arrEng = ["banana", "apple", "orange", "book"];
+        let arrVie = ["chuoi", "tao", "cam", "sach"];
+        let string = document.getElementById("viet").value;
+        let indexVie = 0;
+        let result = "";
+
+        for (let i = 0; i < arrVie.length; i++){
+            if (string === arrVie[i]){
+                indexVie = i;
+                console.log(indexVie)
+                result = arrEng[i];
+                // for (let j = 0; j < arrEng.length; j++){
+                //     if (indexVie === j) {
+                //         result = arrEng[j]
+                //     }
+                // }
+            }
+        }
+
+document.getElementById("eng").innerHTML = result
+
+    }
+</script>
+
+
