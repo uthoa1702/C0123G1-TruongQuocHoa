@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<canvas style="background-color: yellow" id="DemoCanvas" width="500" height="600"></canvas>
 <p id="theMoi"></p>
 <br>
 <button onclick="changeSize()">doi kich thuoc</button>
@@ -28,11 +28,11 @@
         }
 
 
-        drawCanvas() {
+        drawCanvas(color) {
             let canvas = document.getElementById("DemoCanvas");
             let ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#fa4b2a';
+            ctx.fillStyle = color;
             ctx.fillRect(10, 10, this.width, this.height);
         }
     }
@@ -46,13 +46,13 @@
         let height = +prompt("nhap chieu cao");
         let area = height * width;
         let per = (height + width) * 2;
-
+        let color = prompt("nhap mau sac")
 
         myRectangle.setWidth(width);
         myRectangle.setHeight(height);
         document.getElementById("theMoi").innerHTML = "dien tich : " + area + "<br>" + "chu vi : " + per
 
-        myRectangle.drawCanvas();
+        myRectangle.drawCanvas(color);
     }
 
 
