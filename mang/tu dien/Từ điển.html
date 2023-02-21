@@ -20,20 +20,16 @@
         let indexVie = 0;
         let result = "";
 
-        for (let i = 0; i < arrVie.length; i++){
-            if (string === arrVie[i]){
+        for (let i = 0; i < arrVie.length; i++) {
+            if (string === arrVie[i]) {
                 indexVie = i;
-                console.log(indexVie)
+                console.log(indexVie);
                 result = arrEng[i];
-                // for (let j = 0; j < arrEng.length; j++){
-                //     if (indexVie === j) {
-                //         result = arrEng[j]
-                //     }
-                // }
+
             }
         }
 
-document.getElementById("eng").innerHTML = result
+        document.getElementById("eng").innerHTML = result;
 
     }
 </script>
