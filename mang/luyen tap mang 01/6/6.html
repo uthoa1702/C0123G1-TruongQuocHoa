@@ -6,18 +6,29 @@
 </head>
 <body>
 <script>
-    let arr = [12,23,2,33,7,54,10,8,57,34];
-    let v = +prompt("nhap so bat ki")
-    let n = 0
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === v) {
-            n = n + 1;
-         alert("V is in the array");
+    let arr = [12, 23, 2, 33, 7, 54, 10, 8, 57, 34];
+    let flag;
+    do {
+        let v = +prompt("nhap so bat ki");
+        for (let i = 0; i < arr.length; i++) {
+
+            if (arr[i] === v) {
+                flag = true;
+                break;
+            } else {
+                flag = false;
+            }
+
         }
-        else  {
-           alert("V is not in the array");
+        if (flag) {
+            alert("V is in the array");
+        } else {
+            alert("V is not in the array");
         }
+
     }
+    while (!flag);
+
 </script>
 </body>
 </html>
