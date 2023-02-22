@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<button type="button" onclick="switchOnBut()">ON</button>
+<button type="button" onclick="switchOffBut()">OFF</button>
 <p id="result"></p>
 <script>
 
@@ -36,34 +38,20 @@
         }
     }
 
+    function switchOnBut() {
+        document.getElementById("result").innerHTML = "button is " + switchButton_1.switchOn() + "<br>" + "status: " + electricLamp_1.getStatus() + "<br>";
+
+    }
+
+    function switchOffBut() {
+        document.getElementById("result").innerHTML = "button is " + switchButton_1.switchOff() + "<br>" + "status: " + electricLamp_1.getStatus() + "<br>";
+
+    }
 
     let electricLamp_1 = new ElectricLamp(false);
 
     let switchButton_1 = new SwitchButton(electricLamp_1, false);
 
-    document.write("button is " + switchButton_1.switchOn() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOff() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOn() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOff() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOn() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOff() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOn() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
-
-    document.write("button is " + switchButton_1.switchOff() + "<br>");
-    document.write("status: " + electricLamp_1.getStatus() + "<br>");
 
 </script>
 </body>
