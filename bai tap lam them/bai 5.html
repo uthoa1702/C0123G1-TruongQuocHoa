@@ -6,22 +6,24 @@
 </head>
 <body>
 <script>
-
-    let n = +prompt("nhap do dai");
-    console.log(n)
+    let n = +prompt("Nhap chieu dai mang: ");
     let arr = [];
-
     for (let i = 0; i < n; i++) {
-        let y = +prompt("nhap ky tu cua mang");
-        if (y === arr[i]) {
-            alert("so ban nhap bi trung")
-            y = +prompt("nhap lai ky tu cua mang");
-            arr.push(y)
-        }
-
-    } console.log(arr)
-
-
+        let checkExist;
+        let e;
+        do {
+            checkExist = false;
+            e = prompt("Nhap phan tu thu " + i);
+            if (arr.indexOf(e) === -1) {
+                checkExist = true;
+                alert("ok");
+            }
+            else {
+                alert("bi trung roi chaaa");
+            }
+        } while (!checkExist);
+        arr.push(e);
+    }
 </script>
 </body>
 </html>
